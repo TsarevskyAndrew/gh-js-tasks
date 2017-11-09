@@ -44,7 +44,7 @@ var capsLockTests = [
 
 
 function capsLock(str) {
-    //TODO
+   
 }
 
 

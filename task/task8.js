@@ -68,7 +68,35 @@ var registrationTests = [
 
 
 function registration(names) {
-    //TODO
+    let allNames = [];
+    for (let i = 0; i < names.length; i++) {
+        let ind = 0;
+        let currentName = names[i];
+        let find = true;
+        while (find) {
+            find = false;
+            for (let j = 0; j < allNames.length; j++) {
+                if (currentName === allNames[j]) {
+                    find = true;
+                    break;
+                }
+            }
+            if (find) {
+                ind++;
+                currentName = names[i] + ind;
+            }
+        }
+        allNames.push(currentName)
+    }
+    let res = [];
+    for (let i = 0; i < names.length; i++) {
+        if (names[i] === allNames[i]) {
+            res.push('OK');
+        } else {
+            res.push(allNames[i]);
+        }
+    }
+    return res;a
 }
 
 

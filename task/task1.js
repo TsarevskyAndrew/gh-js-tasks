@@ -33,7 +33,23 @@ var fibonacciTests = [
 
 
 function fibonacci(n) {
-    //TODO
+   let a = 1;
+   let b = 1;
+    if (n <= 0) {
+        return 0; 
+    } else if (n == 2) {
+        return 2;
+    } else if (n >= 3) {
+        let res = 2;
+        for (let i = 3; i <= n; i++) {
+            let c = a + b;
+            a = b;
+            b = c;
+            res += b;
+        }
+        return res;
+    }
+    return b;
 }
 
 

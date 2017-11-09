@@ -47,7 +47,14 @@ var doubleColaTests = [
 
 
 function doubleCola(n) {
-    //TODO
+    let arr = ["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"]
+    while (n !== 0) {
+        arr.push(arr[0]);
+        arr.push(arr[0]);
+        arr.shift();
+        n--;
+    }
+    return arr[arr.length - 1];
 }
 
 

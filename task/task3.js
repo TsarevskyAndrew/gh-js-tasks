@@ -45,7 +45,17 @@ var longWordTests = [
 
 
 function longWord(word) {
-    //TODO
+    let le = word.length;
+    if (typeof(word) == 'string') {
+        if (le < 10) {
+            return word;
+        } else {
+             return word.charAt(0)+(le - 2)+word.charAt(le-1);
+        } 
+    } else { 
+         let a = "must be type string"
+         return a;
+    }       
 }
 
 

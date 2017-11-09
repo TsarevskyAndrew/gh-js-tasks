@@ -55,8 +55,26 @@ var luckyNumberTests = [
 
 
 function luckyNumber(number) {
-    //TODO
-}
+     let count = 0;
+    for (let i = 0; i < number.length; i++) {
+        if (number[i] === '4' || number[i] === '7') {
+            count ++;
+        }
+    }
+
+    if (count >= 10) {
+        for (let i = 0; i < count.toString().length; i++) {
+            if (count.toString()[i] !== '4' && count.toString()[i] !== '7') {
+                return false;
+            }
+        }
+        return true
+    }
+    if (count === 4 || count === 7) {
+        return true
+    }
+    return false;
+} 
 
 
 tasks.push({

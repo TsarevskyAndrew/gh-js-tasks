@@ -34,7 +34,18 @@ var prettyYearTests = [
 
 
 function prettyYear(y) {
-    //TODO
+    if (1000 <= +y && +y <= 9000) {
+        for (var i = +y+1; i < 9000; i++) {
+            var year = i.toString();
+            if (year[0] != year[1] && year[0] != year[2] && year[0] != year[3]
+                && year[1] != year[2] && year[1] != year[3]
+                && year[2] != year[3]) {
+                return i;
+            }
+        }         
+    } else {
+     return "Введите число от 1000 до 9000";
+    }  
 }
 
 

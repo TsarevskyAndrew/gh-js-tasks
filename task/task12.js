@@ -53,7 +53,16 @@ var fastMathTest = [
 
 
 function fastMath(a, b) {
-    //TODO
+    let concat = a + b;
+    let res = '';
+    for (let i = 0; i < concat.length / 2; i++) {
+        if (concat[i] === concat[i + a.length]) {
+            res += '0';
+        } else {
+            res += '1';
+        }
+    }
+    return res;
 }
 
 

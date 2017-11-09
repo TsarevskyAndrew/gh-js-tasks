@@ -38,7 +38,13 @@ var stringDotTests = [
 
 
 function stringDot(word) {
-    //TODO
+    let reg = new RegExp('[aoyeui]', 'ig');
+    let repl = word.replace(reg, '');
+    let res = '';
+    for (let i = 0; i < repl.length; i++) {
+        res += '.' + repl[i];
+    }
+    return res.toLowerCase();
 }
 
 

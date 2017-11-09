@@ -30,7 +30,10 @@ var chatTest = [
 
 
 function chat(s) {
-    //TODO
+    if (typeof(s) === "string"){
+        return /h.e.l.l.o/.test(s).toString();
+    }
+    return "впишите строку";    
 }
 
 
