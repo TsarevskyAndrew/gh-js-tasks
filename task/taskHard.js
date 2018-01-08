@@ -40,7 +40,18 @@ var drazilTest = [
     
 
 function drazil(boys, girls) {
-    //TODO
+    if (boys.length < 1 && boys.length > 15) {
+		return NaN;
+	}
+	var array = ["0", "0", "2", "3", "322", "5", "53", "7", "7222", "7332"];
+	var result = "";
+	for (var i = 0; i < boys.length; i++) {
+		if ( boys[i] !== "0" && boys[i] !== "1") {
+			result += array[boys[i]];
+		}
+	}
+	result = result.split("").sort().reverse().join("");
+	return +result;
 }
 
 
